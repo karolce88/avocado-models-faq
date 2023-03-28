@@ -209,6 +209,7 @@ main .faq-section .faq-items .q-box {
   align-items: center;
   border-radius: 10px;
   background-color: #d6d6d6;
+  box-shadow: 1px 2px 2px 1px #585658;
   text-decoration: none;
   cursor: pointer;
 }
@@ -247,7 +248,8 @@ main .faq-section .faq-items .content {
   overflow: hidden;
   height: 0px;
   opacity: 0;
-  transition: all 0.8s;
+  box-shadow: 1px 1px 3px 1px #585658;
+  transition: all 0.2s;
 }
 main .faq-section .faq-items .content p {
   padding: 5px 0;

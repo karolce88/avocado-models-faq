@@ -148,7 +148,7 @@ main {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			
+
 			.q-box {
 				margin: 15px 0 3px 0;
 				width: 310px;
@@ -157,6 +157,7 @@ main {
 				align-items: center;
 				border-radius: 10px;
 				background-color: $first-color;
+				box-shadow: 1px 2px 2px 1px $black-text;
 				text-decoration: none;
 				cursor: pointer;
 
@@ -201,7 +202,8 @@ main {
 				overflow: hidden;
 				height: 0px;
 				opacity: 0;
-				transition: all .8s;
+				box-shadow: 1px 1px 3px 1px $black-text;
+				transition: all 0.2s;
 
 				p {
 					padding: 5px 0;
