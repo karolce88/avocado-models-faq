@@ -13,123 +13,6 @@
 	transform: translate(-50%, -50%);
 }
 
-//buregr icon - animations:
-
-@mixin anim-btn2 {
-	animation: animation-btn2 0.4s ease-in forwards;
-}
-@keyframes animation-btn2 {
-	from {
-		width: 25px;
-	}
-	to {
-		width: 0px;
-	}
-}
-
-@mixin anim-btn1 {
-	animation: animation-btn1 0.4s ease-in forwards;
-}
-@keyframes animation-btn1 {
-	from {
-	}
-	to {
-		transform: rotate(45deg);
-		transform-origin: -5% 220%;
-	}
-}
-
-@mixin anim-btn3 {
-	animation: animation-btn3 0.4s ease-in forwards;
-}
-@keyframes animation-btn3 {
-	from {
-	}
-	to {
-		transform: rotate(-45deg);
-		transform-origin: -2% -110%;
-	}
-}
-
-//buregr icon - animations - rev:
-
-@mixin anim-btn2-rev {
-	animation: animation-btn2-rev 0.4s ease-in forwards;
-}
-@keyframes animation-btn2-rev {
-	from {
-		width: 0px;
-	}
-	to {
-		width: 25px;
-	}
-}
-
-@mixin anim-btn1-rev {
-	animation: animation-btn1-rev 0.4s ease-in forwards;
-}
-@keyframes animation-btn1-rev {
-	from {
-		transform: rotate(45deg);
-		transform-origin: -5% 220%;
-	}
-	to {
-	}
-}
-
-@mixin anim-btn3-rev {
-	animation: animation-btn3-rev 0.4s ease-in forwards;
-}
-@keyframes animation-btn3-rev {
-	from {
-		transform: rotate(-45deg);
-		transform-origin: -2% -110%;
-	}
-	to {
-	}
-}
-
-// mobile menu anim:
-
-@mixin mobile-menu-anim {
-	animation: animation-menu 0.8s ease forwards;
-}
-
-@keyframes animation-menu {
-	from {
-		right: -110%;
-	}
-	to {
-		right: 0%;
-	}
-}
-
-@mixin mobile-menu-anim-rev {
-	animation: animation-menu-rev 0.8s ease forwards;
-}
-
-@keyframes animation-menu-rev {
-	from {
-		right: 0%;
-	}
-	to {
-		right: -110%;
-	}
-}
-
-@mixin mobile-menu-text {
-	animation: mobile-menu-text-anim 0.9s ease forwards;
-}
-
-@keyframes mobile-menu-text-anim {
-	from {
-		right: -500%;
-	}
-	to {
-		right: 0%;
-	}
-}
-
 // h1 header animation::after
 
 @keyframes h1-header-anim {
@@ -156,19 +39,7 @@
 	transform: skew(-55deg);
 }
 
-@mixin section-top {
-	position: absolute;
-	width: 42vw;
-	height: 10%;
-	background-color: $light-white;
-	top: 0px;
-	left: -150px;
-	z-index: 1;
-	transform: skew(-55deg);
-}
-
 // main sections:
-
 //h1:
 
 @mixin h1-style {
@@ -180,20 +51,20 @@
 	text-transform: uppercase;
 	color: $black-text;
 	z-index: 1;
+	font-size: 18px;
 }
 
 @mixin h1-break-line {
 	content: '';
 	position: absolute;
-	bottom: -6px;
+	bottom: -16px;
 	transform: rotate(-4deg);
 	width: 0;
 	height: 0;
-	border-left: 160px solid transparent;
-	border-right: 25px solid transparent;
-	border-bottom: 30px solid $main-green;
+	border-left: 180px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 25px solid $main-green;
 	z-index: -1;
-	border-radius: 20px;
 }
 
 // h3 break line
@@ -228,50 +99,6 @@
 @mixin link-anim-hover-after {
 	width: 100%;
 }
-
-// animation for button in casting section:
-
-@keyframes anim-button-casting {
-	0% {
-		opacity: 0.2;
-
-	}
-	50% {
-		opacity: 0.4;
-
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1.2);
-	}
-}
-
-// animation for CTA button
-
-@keyframes shake {
-	0% {
-		transform: scale3d(1, 1, 1);
-	}
-	30% {
-		transform: scale3d(1.25, 0.75, 1);
-	}
-	40% {
-		transform: scale3d(0.75, 1.25, 1);
-	}
-	50% {
-		transform: scale3d(1.15, 0.85, 1);
-	}
-	65% {
-		transform: scale3d(0.95, 1.05, 1);
-	}
-	75% {
-		transform: scale3d(1.05, 0.95, 1);
-	}
-	100% {
-		transform: scale3d(1, 1, 1);
-	}
-}
-
 
 // bg-icon animations (svg)
 

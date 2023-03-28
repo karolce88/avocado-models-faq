@@ -25,70 +25,6 @@
   transform: translate(-50%, -50%);
 }
 
-@keyframes animation-btn2 {
-  from {
-    width: 25px;
-  }
-  to {
-    width: 0px;
-  }
-}
-@keyframes animation-btn1 {
-  to {
-    transform: rotate(45deg);
-    transform-origin: -5% 220%;
-  }
-}
-@keyframes animation-btn3 {
-  to {
-    transform: rotate(-45deg);
-    transform-origin: -2% -110%;
-  }
-}
-@keyframes animation-btn2-rev {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 25px;
-  }
-}
-@keyframes animation-btn1-rev {
-  from {
-    transform: rotate(45deg);
-    transform-origin: -5% 220%;
-  }
-}
-@keyframes animation-btn3-rev {
-  from {
-    transform: rotate(-45deg);
-    transform-origin: -2% -110%;
-  }
-}
-@keyframes animation-menu {
-  from {
-    right: -110%;
-  }
-  to {
-    right: 0%;
-  }
-}
-@keyframes animation-menu-rev {
-  from {
-    right: 0%;
-  }
-  to {
-    right: -110%;
-  }
-}
-@keyframes mobile-menu-text-anim {
-  from {
-    right: -500%;
-  }
-  to {
-    right: 0%;
-  }
-}
 @keyframes h1-header-anim {
   from {
     transform: rotateY(0deg);
@@ -96,41 +32,6 @@
   }
   to {
     transform: rotate(-182deg) translate(28%, -37%);
-  }
-}
-@keyframes anim-button-casting {
-  0% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.2);
-  }
-}
-@keyframes shake {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
   }
 }
 @keyframes rotate-left {
@@ -206,7 +107,7 @@ body {
 .header .head-box {
   position: relative;
   background-image: url("../img/hero-img-big.jpg");
-  height: 340px;
+  height: 280px;
   background-size: cover;
   background-position: center;
 }
@@ -262,17 +163,14 @@ body {
 main {
   overflow: hidden;
 }
-main .offer-section {
+main .faq-section {
   scroll-margin-top: 50px;
   position: relative;
 }
-main .offer-section .bg-dollar {
+main .faq-section .bg-dollar {
   display: none;
 }
-main .offer-section .offer .container {
-  height: 600px;
-}
-main .offer-section .offer .container .head-br {
+main .faq-section .faq .container .head-br {
   position: relative;
   display: flex;
   justify-content: center;
@@ -281,28 +179,93 @@ main .offer-section .offer .container .head-br {
   text-transform: uppercase;
   color: #585658;
   z-index: 1;
-  padding: 70px 0 0;
+  font-size: 18px;
+  padding: 35px 0 0;
+  text-align: center;
 }
-main .offer-section .offer .container .head-br::after {
+main .faq-section .faq .container .head-br::after {
   content: "";
   position: absolute;
-  bottom: -6px;
+  bottom: -16px;
   transform: rotate(-4deg);
   width: 0;
   height: 0;
-  border-left: 160px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 30px solid #56f000;
+  border-left: 180px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 25px solid #56f000;
   z-index: -1;
-  border-radius: 20px;
 }
-main .offer-section .offer-items {
-  padding: 0px 12px 120px 12px;
+main .faq-section .faq-items {
+  margin: 70px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .faq-section .faq-items .q-box {
+  margin: 15px 0 3px 0;
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #d6d6d6;
+  text-decoration: none;
+  cursor: pointer;
+}
+main .faq-section .faq-items .q-box h4 {
+  padding: 8px;
+  color: #585658;
+}
+main .faq-section .faq-items .q-box .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  min-width: 30px;
+  min-height: 30px;
+  margin-left: 12px;
+  background-image: url("../img/plus.svg");
+  background-position: center;
+}
+main .faq-section .faq-items .q-box .icon .arrow-down {
+  width: 20px;
+  transform: rotate(180deg);
+}
+main .faq-section .faq-items .q-box .icon-minus {
+  background-image: url("../img/minus.svg");
+}
+main .faq-section .faq-items .q-box-color-two {
+  background-color: rgba(189, 190, 192, 0.9019607843);
+}
+main .faq-section .faq-items .content {
+  width: 310px;
+  padding: 8px 8px 8px 8px;
+  font-size: 15px;
+  color: #585658;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4862745098);
+  overflow: hidden;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.8s;
+}
+main .faq-section .faq-items .content p {
+  padding: 5px 0;
+  font-size: 0px;
+  height: 0px;
+}
+main .faq-section .faq-items .show {
+  opacity: 1;
+  height: auto;
+}
+main .faq-section .faq-items .show p {
+  font-size: 15px;
+  height: auto;
 }
 
 footer .created-by {
   width: 100%;
-  background-color: #393939;
+  background-color: #0d0d0d;
 }
 footer .created-by .line {
   margin: 0 auto;
@@ -353,4 +316,36 @@ footer .created-by .created-box p .btn-footer::after {
 }
 footer .created-by .created-box p .btn-footer:hover::after {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  main .faq-section .faq-items .q-box {
+    width: 85%;
+  }
+  main .faq-section .faq-items .content {
+    width: 85%;
+  }
+}
+@media (min-width: 1100px) {
+  main .faq-section .bg-dollar {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 4%;
+    width: 200px;
+    z-index: -20;
+    opacity: 0.05;
+    animation: rotate-left 50s infinite linear;
+  }
+  main .faq-section .left {
+    top: 600px;
+    left: 4%;
+    animation: rotate-right 50s infinite linear;
+  }
+  main .faq-section .faq-items .q-box {
+    width: 85%;
+  }
+  main .faq-section .faq-items .content {
+    width: 85%;
+  }
 }/*# sourceMappingURL=style.css.map */

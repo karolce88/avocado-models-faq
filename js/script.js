@@ -1,85 +1,75 @@
-const burgerBtn = document.querySelector('.burger-button')
-const itemTwo = document.querySelector('.item2')
-const itemFirst = document.querySelector('.item1')
-const itemThree = document.querySelector('.item3')
-const mobileNav = document.querySelector('.mobile-nav-container')
-const mobileNavText = document.querySelector('.mobile-nav-items')
-const mobileNavHeight = document.querySelector('.mobile-nav')
-const clickToHideMenu = document.querySelectorAll('.text-menu-anim')
-const nav = document.querySelector('.mobile-nav')
-const logo = document.querySelector('.logo')
-const footerYear = document.querySelector('.footer-year')
+const box1 = document.querySelector('.question1')
+const box2 = document.querySelector('.question2')
+const box3 = document.querySelector('.question3')
+const box4 = document.querySelector('.question4')
+const box5 = document.querySelector('.question5')
+const box6 = document.querySelector('.question6')
+const box7 = document.querySelector('.question7')
+const box8 = document.querySelector('.question8')
+const box9 = document.querySelector('.question9')
+const content1 = document.querySelector('.content1')
+const content2 = document.querySelector('.content2')
+const content3 = document.querySelector('.content3')
+const content4 = document.querySelector('.content4')
+const content5 = document.querySelector('.content5')
+const content6 = document.querySelector('.content6')
+const content7 = document.querySelector('.content7')
+const content8 = document.querySelector('.content8')
+const content9 = document.querySelector('.content9')
+const icon1 = document.querySelector('.icon1')
+const icon2 = document.querySelector('.icon2')
+const icon3 = document.querySelector('.icon3')
+const icon4 = document.querySelector('.icon4')
+const icon5 = document.querySelector('.icon5')
+const icon6 = document.querySelector('.icon6')
+const icon7 = document.querySelector('.icon7')
+const icon8 = document.querySelector('.icon8')
+const icon9 = document.querySelector('.icon9')
 
 
-function btnClick() {
-	// hide menu and removes button animations
-	clickToHideMenu.forEach(item => {
-		item.addEventListener('click', () => {
-			nav.classList.remove('mobile-nav-show')
-			itemTwo.classList.remove('item2-display-none')
-			itemFirst.classList.remove('item1-rotate')
-			itemThree.classList.remove('item3-rotate')
-			burgerBtn.classList.remove('container-btn-border')
-		})
-	})
-	if (
-		itemTwo.classList.contains('item2-display-none') &&
-		itemFirst.classList.contains('item1-rotate') &&
-		itemThree.classList.contains('item3-rotate')
-	) {
-		// secontd step
-		itemTwo.classList.remove('item2-display-none')
-		itemFirst.classList.remove('item1-rotate')
-		itemThree.classList.remove('item3-rotate')
-		itemTwo.classList.add('item2-display-none-rev')
-		itemFirst.classList.add('item1-rotate-rev')
-		itemThree.classList.add('item3-rotate-rev')
-		burgerBtn.classList.remove('container-btn-border')
-		mobileNav.classList.add('mobile-nav-container-show-rev')
-		mobileNavText.classList.remove('aanimation')
-		mobileNavHeight.classList.remove('mobile-nav-show')
-	} else if (
-		itemTwo.classList.contains('item2-display-none-rev') &&
-		itemFirst.classList.contains('item1-rotate-rev') &&
-		itemThree.classList.contains('item3-rotate-rev')
-	) {
-		// third step
-		mobileNavHeight.classList.add('mobile-nav-show')
-		itemTwo.classList.remove('item2-display-none-rev')
-		itemFirst.classList.remove('item1-rotate-rev')
-		itemThree.classList.remove('item3-rotate-rev')
-		itemTwo.classList.add('item2-display-none')
-		itemFirst.classList.add('item1-rotate')
-		itemThree.classList.add('item3-rotate')
-		burgerBtn.classList.add('container-btn-border')
-		mobileNav.classList.remove('mobile-nav-container-show-rev')
-		mobileNav.classList.add('mobile-nav-container-show')
-		mobileNavText.classList.add('aanimation')
-	} else {
-		// first step
-		mobileNavHeight.classList.add('mobile-nav-show')
-		itemTwo.classList.add('item2-display-none')
-		itemFirst.classList.add('item1-rotate')
-		itemThree.classList.add('item3-rotate')
-		burgerBtn.classList.add('container-btn-border')
-		mobileNav.classList.add('mobile-nav-container-show')
-		mobileNavText.classList.add('aanimation')
-	}
+function showContent1() {
+content1.classList.toggle('show')
+icon1.classList.toggle('icon-minus')
 }
-function logoClick (){
-			nav.classList.remove('mobile-nav-show')
-			itemTwo.classList.remove('item2-display-none')
-			itemFirst.classList.remove('item1-rotate')
-			itemThree.classList.remove('item3-rotate')
-			burgerBtn.classList.remove('container-btn-border')
+function showContent2() {
+content2.classList.toggle('show')
+icon2.classList.toggle('icon-minus')
+}
+function showContent3() {
+content3.classList.toggle('show')
+icon3.classList.toggle('icon-minus')
+}
+function showContent4() {
+content4.classList.toggle('show')
+icon4.classList.toggle('icon-minus')
+}
+function showContent5() {
+content5.classList.toggle('show')
+icon5.classList.toggle('icon-minus')
+}
+function showContent6() {
+content6.classList.toggle('show')
+icon6.classList.toggle('icon-minus')
+}
+function showContent7() {
+content7.classList.toggle('show')
+icon7.classList.toggle('icon-minus')
+}
+function showContent8() {
+content8.classList.toggle('show')
+icon8.classList.toggle('icon-minus')
+}
+function showContent9() {
+content9.classList.toggle('show')
+icon9.classList.toggle('icon-minus')
 }
 
-
-const handleCurrentYear = () => {
-    const year = (new Date).getFullYear();
-    footerYear.innerText = year;
-}
-
-handleCurrentYear();
-burgerBtn.addEventListener('click', btnClick)
-logo.addEventListener('click', logoClick)
+box1.addEventListener('click', showContent1)
+box2.addEventListener('click', showContent2)
+box3.addEventListener('click', showContent3)
+box4.addEventListener('click', showContent4)
+box5.addEventListener('click', showContent5)
+box6.addEventListener('click', showContent6)
+box7.addEventListener('click', showContent7)
+box8.addEventListener('click', showContent8)
+box9.addEventListener('click', showContent9)
